@@ -1,0 +1,422 @@
+2021-06-04T11:33:42.446+0800	INFO	middlewares/logger.go:29	/v1/user/test	{"method": "GET", "path": "/v1/user/test", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "653ns"}
+2021-06-04T13:59:12.737+0800	ERROR	middlewares/logger.go:71	[Recovery from panic]	{"error": "interface conversion: interface {} is uint, not string", "request": "GET /v1/user/test HTTP/1.1\r\nHost: 127.0.0.1:8022\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nPostman-Token: 5d0a88e5-4fcf-45c4-8731-773778bbf439\r\nUser-Agent: PostmanRuntime/7.26.8\r\nX-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiTmlja05hbWUiOiJwZWl5YWh1aTAiLCJBdXRob3JpdHlJZCI6MiwiZXhwIjoxNjI0MjYzMzUyLCJpc3MiOiJpbW9vYyIsIm5iZiI6MTYyMTY3MTM1Mn0.92RIaS-TCdKbOZcPWKrnD__UFvE40tKOqDRdysNuudM\r\n\r\n", "stack": "goroutine 8 [running]:\nruntime/debug.Stack(0x0, 0xc0001f4000, 0x1b0)\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x9f\ngo_gin/middlewares.GinRecovery.func1.1(0xc0000d0200, 0x1)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:74 +0x24a\npanic(0x17e6020, 0xc0004f5680)\n\t/usr/local/go/src/runtime/panic.go:965 +0x1b9\ngo_gin/dao.UsernameFindUserInfo(0x18c16a5, 0x9, 0xc00012f3f0)\n\t/Users/peiyahui/Desktop/code/go_gin/dao/userDao.go:62 +0x345\ngo_gin/controller.TestUser(0xc0000d0200)\n\t/Users/peiyahui/Desktop/code/go_gin/controller/user.go:59 +0x36\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.GinRecovery.func1(0xc0000d0200)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:85 +0x6a\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.GinLogger.func1(0xc0000d0200)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:25 +0xa4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0000d0200)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99 +0x7a\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000d0200)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241 +0xf4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0001964e0, 0xc0000d0200)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489 +0x2aa\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0001964e0, 0x19bf070, 0xc0001340e0, 0xc0000d0100)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445 +0x15c\nnet/http.serverHandler.ServeHTTP(0xc000134000, 0x19bf070, 0xc0001340e0, 0xc0000d0100)\n\t/usr/local/go/src/net/http/server.go:2887 +0xa3\nnet/http.(*conn).serve(0xc0004ea0a0, 0x19c0e40, 0xc0004fb3c0)\n\t/usr/local/go/src/net/http/server.go:1952 +0x8cd\ncreated by net/http.(*Server).Serve\n\t/usr/local/go/src/net/http/server.go:3013 +0x39b\n"}
+go_gin/middlewares.GinRecovery.func1.1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:71
+runtime.gopanic
+	/usr/local/go/src/runtime/panic.go:965
+runtime.panicdottypeE
+	/usr/local/go/src/runtime/iface.go:261
+go_gin/dao.UsernameFindUserInfo
+	/Users/peiyahui/Desktop/code/go_gin/dao/userDao.go:62
+go_gin/controller.TestUser
+	/Users/peiyahui/Desktop/code/go_gin/controller/user.go:59
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.GinRecovery.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:85
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.GinLogger.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:25
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1952
+2021-06-04T13:59:12.743+0800	INFO	middlewares/logger.go:29	/v1/user/test	{"method": "GET", "path": "/v1/user/test", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "181.605634ms"}
+2021-06-04T14:33:52.162+0800	ERROR	middlewares/logger.go:71	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "GET /v1/user/test HTTP/1.1\r\nHost: 127.0.0.1:8022\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nPostman-Token: b6e49a01-dca5-424d-ac52-cee562e25a63\r\nUser-Agent: PostmanRuntime/7.26.8\r\nX-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiTmlja05hbWUiOiJwZWl5YWh1aTAiLCJBdXRob3JpdHlJZCI6MiwiZXhwIjoxNjI0MjYzMzUyLCJpc3MiOiJpbW9vYyIsIm5iZiI6MTYyMTY3MTM1Mn0.92RIaS-TCdKbOZcPWKrnD__UFvE40tKOqDRdysNuudM\r\n\r\n", "stack": "goroutine 24 [running]:\nruntime/debug.Stack(0x0, 0xc00017c000, 0x1b0)\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x9f\ngo_gin/middlewares.GinRecovery.func1.1(0xc000516200, 0x1)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:74 +0x24a\npanic(0x17e1100, 0x20b39e0)\n\t/usr/local/go/src/runtime/panic.go:965 +0x1b9\ngo_gin/controller.HandleUserModelToMap(0x20ccc80, 0x9)\n\t/Users/peiyahui/Desktop/code/go_gin/controller/user.go:16 +0x2a\ngo_gin/controller.TestUser(0xc000516200)\n\t/Users/peiyahui/Desktop/code/go_gin/controller/user.go:90 +0x4f\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.GinRecovery.func1(0xc000516200)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:85 +0x6a\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.GinLogger.func1(0xc000516200)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:25 +0xa4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000516200)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99 +0x7a\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000516200)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241 +0xf4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0007304e0, 0xc000516200)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489 +0x2aa\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0007304e0, 0x19c0270, 0xc0002860e0, 0xc000516100)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445 +0x15c\nnet/http.serverHandler.ServeHTTP(0xc000286000, 0x19c0270, 0xc0002860e0, 0xc000516100)\n\t/usr/local/go/src/net/http/server.go:2887 +0xa3\nnet/http.(*conn).serve(0xc0000a4000, 0x19c2040, 0xc000090380)\n\t/usr/local/go/src/net/http/server.go:1952 +0x8cd\ncreated by net/http.(*Server).Serve\n\t/usr/local/go/src/net/http/server.go:3013 +0x39b\n"}
+go_gin/middlewares.GinRecovery.func1.1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:71
+runtime.gopanic
+	/usr/local/go/src/runtime/panic.go:965
+runtime.panicmem
+	/usr/local/go/src/runtime/panic.go:212
+runtime.sigpanic
+	/usr/local/go/src/runtime/signal_unix.go:734
+go_gin/controller.HandleUserModelToMap
+	/Users/peiyahui/Desktop/code/go_gin/controller/user.go:16
+go_gin/controller.TestUser
+	/Users/peiyahui/Desktop/code/go_gin/controller/user.go:90
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.GinRecovery.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:85
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.GinLogger.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:25
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1952
+2021-06-04T14:33:52.176+0800	INFO	middlewares/logger.go:29	/v1/user/test	{"method": "GET", "path": "/v1/user/test", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "79.135801ms"}
+2021-06-04T14:35:01.527+0800	ERROR	middlewares/logger.go:71	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "GET /v1/user/test HTTP/1.1\r\nHost: 127.0.0.1:8022\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nPostman-Token: c3fe4031-5199-46fa-839f-d398d083913b\r\nUser-Agent: PostmanRuntime/7.26.8\r\nX-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiTmlja05hbWUiOiJwZWl5YWh1aTAiLCJBdXRob3JpdHlJZCI6MiwiZXhwIjoxNjI0MjYzMzUyLCJpc3MiOiJpbW9vYyIsIm5iZiI6MTYyMTY3MTM1Mn0.92RIaS-TCdKbOZcPWKrnD__UFvE40tKOqDRdysNuudM\r\n\r\n", "stack": "goroutine 25 [running]:\nruntime/debug.Stack(0x0, 0xc0000f0000, 0x1b0)\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x9f\ngo_gin/middlewares.GinRecovery.func1.1(0xc000228300, 0x1)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:74 +0x24a\npanic(0x17e1120, 0x20b39e0)\n\t/usr/local/go/src/runtime/panic.go:965 +0x1b9\ngo_gin/controller.HandleUserModelToMap(0x20ccc80, 0x9)\n\t/Users/peiyahui/Desktop/code/go_gin/controller/user.go:16 +0x2a\ngo_gin/controller.TestUser(0xc000228300)\n\t/Users/peiyahui/Desktop/code/go_gin/controller/user.go:90 +0x4f\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.GinRecovery.func1(0xc000228300)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:85 +0x6a\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.GinLogger.func1(0xc000228300)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:25 +0xa4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000228300)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99 +0x7a\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000228300)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241 +0xf4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0003fc340, 0xc000228300)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489 +0x2aa\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0003fc340, 0x19c0290, 0xc0001800e0, 0xc000228200)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445 +0x15c\nnet/http.serverHandler.ServeHTTP(0xc000180000, 0x19c0290, 0xc0001800e0, 0xc000228200)\n\t/usr/local/go/src/net/http/server.go:2887 +0xa3\nnet/http.(*conn).serve(0xc0004620a0, 0x19c2060, 0xc000471380)\n\t/usr/local/go/src/net/http/server.go:1952 +0x8cd\ncreated by net/http.(*Server).Serve\n\t/usr/local/go/src/net/http/server.go:3013 +0x39b\n"}
+go_gin/middlewares.GinRecovery.func1.1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:71
+runtime.gopanic
+	/usr/local/go/src/runtime/panic.go:965
+runtime.panicmem
+	/usr/local/go/src/runtime/panic.go:212
+runtime.sigpanic
+	/usr/local/go/src/runtime/signal_unix.go:734
+go_gin/controller.HandleUserModelToMap
+	/Users/peiyahui/Desktop/code/go_gin/controller/user.go:16
+go_gin/controller.TestUser
+	/Users/peiyahui/Desktop/code/go_gin/controller/user.go:90
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.GinRecovery.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:85
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.GinLogger.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:25
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1952
+2021-06-04T14:35:01.539+0800	INFO	middlewares/logger.go:29	/v1/user/test	{"method": "GET", "path": "/v1/user/test", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "82.19205ms"}
+2021-06-04T14:37:32.801+0800	ERROR	middlewares/logger.go:71	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "GET /v1/user/test HTTP/1.1\r\nHost: 127.0.0.1:8022\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nPostman-Token: 0643568b-d80e-43f6-9919-377d09834bc0\r\nUser-Agent: PostmanRuntime/7.26.8\r\nX-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiTmlja05hbWUiOiJwZWl5YWh1aTAiLCJBdXRob3JpdHlJZCI6MiwiZXhwIjoxNjI0MjYzMzUyLCJpc3MiOiJpbW9vYyIsIm5iZiI6MTYyMTY3MTM1Mn0.92RIaS-TCdKbOZcPWKrnD__UFvE40tKOqDRdysNuudM\r\n\r\n", "stack": "goroutine 50 [running]:\nruntime/debug.Stack(0x0, 0xc0000f0000, 0x1b0)\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x9f\ngo_gin/middlewares.GinRecovery.func1.1(0xc000228300, 0x1)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:74 +0x24a\npanic(0x17e11c0, 0x20b39e0)\n\t/usr/local/go/src/runtime/panic.go:965 +0x1b9\ngo_gin/controller.HandleUserModelToMap(0x20ccc80, 0x9)\n\t/Users/peiyahui/Desktop/code/go_gin/controller/user.go:17 +0x3b\ngo_gin/controller.TestUser(0xc000228300)\n\t/Users/peiyahui/Desktop/code/go_gin/controller/user.go:92 +0x4f\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.GinRecovery.func1(0xc000228300)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:85 +0x6a\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.GinLogger.func1(0xc000228300)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:25 +0xa4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000228300)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99 +0x7a\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000228300)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241 +0xf4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc000418000, 0xc000228300)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489 +0x2aa\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc000418000, 0x19c0390, 0xc0005360e0, 0xc000228200)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445 +0x15c\nnet/http.serverHandler.ServeHTTP(0xc000536000, 0x19c0390, 0xc0005360e0, 0xc000228200)\n\t/usr/local/go/src/net/http/server.go:2887 +0xa3\nnet/http.(*conn).serve(0xc0004a2000, 0x19c2160, 0xc000471380)\n\t/usr/local/go/src/net/http/server.go:1952 +0x8cd\ncreated by net/http.(*Server).Serve\n\t/usr/local/go/src/net/http/server.go:3013 +0x39b\n"}
+go_gin/middlewares.GinRecovery.func1.1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:71
+runtime.gopanic
+	/usr/local/go/src/runtime/panic.go:965
+runtime.panicmem
+	/usr/local/go/src/runtime/panic.go:212
+runtime.sigpanic
+	/usr/local/go/src/runtime/signal_unix.go:734
+go_gin/controller.HandleUserModelToMap
+	/Users/peiyahui/Desktop/code/go_gin/controller/user.go:17
+go_gin/controller.TestUser
+	/Users/peiyahui/Desktop/code/go_gin/controller/user.go:92
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.GinRecovery.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:85
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.GinLogger.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:25
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1952
+2021-06-04T14:37:32.816+0800	INFO	middlewares/logger.go:29	/v1/user/test	{"method": "GET", "path": "/v1/user/test", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "81.378933ms"}
+2021-06-04T15:02:15.410+0800	INFO	middlewares/logger.go:29	/v1/user/login	{"method": "POST", "path": "/v1/user/login", "query": "password=admin123&mobile=13999189290&captcha=44351&captcha_id=U77txKHURD1ns77nsJaN&name=13999189290", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "519.072µs"}
+2021-06-04T15:08:01.474+0800	INFO	middlewares/logger.go:29	/v1/user/test	{"method": "GET", "path": "/v1/user/test", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "67.792µs"}
+2021-06-04T15:13:26.353+0800	INFO	middlewares/logger.go:29	/v1/user/login	{"method": "POST", "path": "/v1/user/login", "query": "password=admin123&mobile=13999189290&captcha=44351&captcha_id=U77txKHURD1ns77nsJaN&name=13999189290", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "227.773µs"}
+2021-06-04T15:13:58.180+0800	INFO	middlewares/logger.go:29	/v1/user/test	{"method": "GET", "path": "/v1/user/test", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "204.164µs"}
+2021-06-04T15:14:38.874+0800	INFO	middlewares/logger.go:29	/v1/user/test	{"method": "GET", "path": "/v1/user/test", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "92.332µs"}
+2021-06-04T17:04:33.736+0800	INFO	middlewares/logger.go:29	/v1/user/test	{"method": "GET", "path": "/v1/user/test", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "326.313µs"}
+2021-06-04T17:10:14.550+0800	INFO	middlewares/logger.go:29	/v1/user/test	{"method": "GET", "path": "/v1/user/test", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "44.58µs"}
+2021-06-04T17:18:38.751+0800	ERROR	middlewares/logger.go:71	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /v1/user/list HTTP/1.1\r\nHost: 127.0.0.1:8022\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 268\r\nContent-Type: multipart/form-data; boundary=--------------------------805445580583219856693633\r\nPostman-Token: e3bd51d9-d2a1-431d-80a6-bfc510f1a355\r\nUser-Agent: PostmanRuntime/7.26.8\r\nX-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiTmlja05hbWUiOiJwZWl5YWh1aTAiLCJBdXRob3JpdHlJZCI6MiwiZXhwIjoxNjI0NjI4Njk5LCJpc3MiOiJpbW9vYyIsIm5iZiI6MTYyMjAzNjY5OX0.u6QB4DeWyK8TtG3BDvZd-t_sPQeXF0lg9uJhUviMnGY\r\n\r\n", "stack": "goroutine 12 [running]:\nruntime/debug.Stack(0x0, 0xc00001e280, 0x226)\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x9f\ngo_gin/middlewares.GinRecovery.func1.1(0xc000510100, 0x1)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:74 +0x24a\npanic(0x17e1080, 0x20b39e0)\n\t/usr/local/go/src/runtime/panic.go:965 +0x1b9\ngo_gin/dao.GetUserList(0x2, 0x8, 0xc000452740, 0x0, 0x0, 0x1057265)\n\t/Users/peiyahui/Desktop/code/go_gin/dao/userDao.go:30 +0x21b\ngo_gin/controller.GetUserList(0xc000510100)\n\t/Users/peiyahui/Desktop/code/go_gin/controller/user.go:71 +0x8d\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.GinRecovery.func1(0xc000510100)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:85 +0x6a\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.GinLogger.func1(0xc000510100)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:25 +0xa4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000510100)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99 +0x7a\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000510100)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241 +0xf4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc00011e340, 0xc000510100)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489 +0x2aa\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc00011e340, 0x19c0290, 0xc000192000, 0xc000510400)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445 +0x15c\nnet/http.serverHandler.ServeHTTP(0xc0001921c0, 0x19c0290, 0xc000192000, 0xc000510400)\n\t/usr/local/go/src/net/http/server.go:2887 +0xa3\nnet/http.(*conn).serve(0xc0000a2500, 0x19c2060, 0xc000090a00)\n\t/usr/local/go/src/net/http/server.go:1952 +0x8cd\ncreated by net/http.(*Server).Serve\n\t/usr/local/go/src/net/http/server.go:3013 +0x39b\n"}
+go_gin/middlewares.GinRecovery.func1.1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:71
+runtime.gopanic
+	/usr/local/go/src/runtime/panic.go:965
+runtime.panicmem
+	/usr/local/go/src/runtime/panic.go:212
+runtime.sigpanic
+	/usr/local/go/src/runtime/signal_unix.go:734
+go_gin/dao.GetUserList
+	/Users/peiyahui/Desktop/code/go_gin/dao/userDao.go:30
+go_gin/controller.GetUserList
+	/Users/peiyahui/Desktop/code/go_gin/controller/user.go:71
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.GinRecovery.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:85
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.GinLogger.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:25
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1952
+2021-06-04T17:18:38.752+0800	INFO	middlewares/logger.go:29	/v1/user/list	{"method": "POST", "path": "/v1/user/list", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "218.342313ms"}
+2021-06-04T17:18:57.756+0800	ERROR	middlewares/logger.go:71	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /v1/user/list HTTP/1.1\r\nHost: 127.0.0.1:8022\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 268\r\nContent-Type: multipart/form-data; boundary=--------------------------166184640684879354446086\r\nPostman-Token: 3c29126e-f105-4095-8e50-d548e8d7e1d8\r\nUser-Agent: PostmanRuntime/7.26.8\r\nX-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiTmlja05hbWUiOiJwZWl5YWh1aTAiLCJBdXRob3JpdHlJZCI6MiwiZXhwIjoxNjI0NjI4Njk5LCJpc3MiOiJpbW9vYyIsIm5iZiI6MTYyMjAzNjY5OX0.u6QB4DeWyK8TtG3BDvZd-t_sPQeXF0lg9uJhUviMnGY\r\n\r\n", "stack": "goroutine 12 [running]:\nruntime/debug.Stack(0x0, 0xc00034e000, 0x226)\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x9f\ngo_gin/middlewares.GinRecovery.func1.1(0xc000510100, 0x1)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:74 +0x24a\npanic(0x17e1080, 0x20b39e0)\n\t/usr/local/go/src/runtime/panic.go:965 +0x1b9\ngo_gin/dao.GetUserList(0x2, 0x8, 0xc000453bd0, 0x0, 0x0, 0x1057265)\n\t/Users/peiyahui/Desktop/code/go_gin/dao/userDao.go:30 +0x21b\ngo_gin/controller.GetUserList(0xc000510100)\n\t/Users/peiyahui/Desktop/code/go_gin/controller/user.go:71 +0x8d\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.GinRecovery.func1(0xc000510100)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:85 +0x6a\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.GinLogger.func1(0xc000510100)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:25 +0xa4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000510100)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99 +0x7a\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000510100)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241 +0xf4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc00011e340, 0xc000510100)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489 +0x2aa\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc00011e340, 0x19c0290, 0xc0001922a0, 0xc000510200)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445 +0x15c\nnet/http.serverHandler.ServeHTTP(0xc0001921c0, 0x19c0290, 0xc0001922a0, 0xc000510200)\n\t/usr/local/go/src/net/http/server.go:2887 +0xa3\nnet/http.(*conn).serve(0xc0000a2500, 0x19c2060, 0xc000090a00)\n\t/usr/local/go/src/net/http/server.go:1952 +0x8cd\ncreated by net/http.(*Server).Serve\n\t/usr/local/go/src/net/http/server.go:3013 +0x39b\n"}
+go_gin/middlewares.GinRecovery.func1.1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:71
+runtime.gopanic
+	/usr/local/go/src/runtime/panic.go:965
+runtime.panicmem
+	/usr/local/go/src/runtime/panic.go:212
+runtime.sigpanic
+	/usr/local/go/src/runtime/signal_unix.go:734
+go_gin/dao.GetUserList
+	/Users/peiyahui/Desktop/code/go_gin/dao/userDao.go:30
+go_gin/controller.GetUserList
+	/Users/peiyahui/Desktop/code/go_gin/controller/user.go:71
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.GinRecovery.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:85
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.GinLogger.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:25
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1952
+2021-06-04T17:18:57.764+0800	INFO	middlewares/logger.go:29	/v1/user/list	{"method": "POST", "path": "/v1/user/list", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "78.026756ms"}
+2021-06-04T17:20:09.085+0800	ERROR	middlewares/logger.go:71	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /v1/user/list HTTP/1.1\r\nHost: 127.0.0.1:8022\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 268\r\nContent-Type: multipart/form-data; boundary=--------------------------296825738191468950632630\r\nPostman-Token: 55c8fbc2-ff99-4367-a72a-0020368aefb2\r\nUser-Agent: PostmanRuntime/7.26.8\r\n\r\n", "stack": "goroutine 12 [running]:\nruntime/debug.Stack(0x0, 0xc00001e280, 0x14b)\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x9f\ngo_gin/middlewares.GinRecovery.func1.1(0xc000510400, 0x1)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:74 +0x24a\npanic(0x17e1080, 0x20b39e0)\n\t/usr/local/go/src/runtime/panic.go:965 +0x1b9\ngo_gin/dao.GetUserList(0x2, 0x8, 0xc000452780, 0x0, 0x0, 0x1057265)\n\t/Users/peiyahui/Desktop/code/go_gin/dao/userDao.go:30 +0x21b\ngo_gin/controller.GetUserList(0xc000510400)\n\t/Users/peiyahui/Desktop/code/go_gin/controller/user.go:71 +0x8d\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.GinRecovery.func1(0xc000510400)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:85 +0x6a\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.GinLogger.func1(0xc000510400)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:25 +0xa4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000510400)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99 +0x7a\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000510400)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241 +0xf4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc00011e340, 0xc000510400)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489 +0x2aa\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc00011e340, 0x19c0290, 0xc000192000, 0xc000510300)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445 +0x15c\nnet/http.serverHandler.ServeHTTP(0xc0001921c0, 0x19c0290, 0xc000192000, 0xc000510300)\n\t/usr/local/go/src/net/http/server.go:2887 +0xa3\nnet/http.(*conn).serve(0xc0000a2500, 0x19c2060, 0xc000090a00)\n\t/usr/local/go/src/net/http/server.go:1952 +0x8cd\ncreated by net/http.(*Server).Serve\n\t/usr/local/go/src/net/http/server.go:3013 +0x39b\n"}
+go_gin/middlewares.GinRecovery.func1.1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:71
+runtime.gopanic
+	/usr/local/go/src/runtime/panic.go:965
+runtime.panicmem
+	/usr/local/go/src/runtime/panic.go:212
+runtime.sigpanic
+	/usr/local/go/src/runtime/signal_unix.go:734
+go_gin/dao.GetUserList
+	/Users/peiyahui/Desktop/code/go_gin/dao/userDao.go:30
+go_gin/controller.GetUserList
+	/Users/peiyahui/Desktop/code/go_gin/controller/user.go:71
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.GinRecovery.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:85
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.GinLogger.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:25
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1952
+2021-06-04T17:20:09.086+0800	INFO	middlewares/logger.go:29	/v1/user/list	{"method": "POST", "path": "/v1/user/list", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "237.628578ms"}
+2021-06-04T17:21:01.123+0800	ERROR	middlewares/logger.go:71	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /v1/user/list?page=2&pageSize=10 HTTP/1.1\r\nHost: 127.0.0.1:8022\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 268\r\nContent-Type: multipart/form-data; boundary=--------------------------833474866331022074355173\r\nPostman-Token: 8be4b448-aa1b-4020-b237-8054964cdc49\r\nUser-Agent: PostmanRuntime/7.26.8\r\n\r\n", "stack": "goroutine 12 [running]:\nruntime/debug.Stack(0x0, 0xc00001e500, 0x15e)\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x9f\ngo_gin/middlewares.GinRecovery.func1.1(0xc000510400, 0x1)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:74 +0x24a\npanic(0x17e1080, 0x20b39e0)\n\t/usr/local/go/src/runtime/panic.go:965 +0x1b9\ngo_gin/dao.GetUserList(0x2, 0x8, 0xc00003e770, 0x0, 0x0, 0x1057265)\n\t/Users/peiyahui/Desktop/code/go_gin/dao/userDao.go:30 +0x21b\ngo_gin/controller.GetUserList(0xc000510400)\n\t/Users/peiyahui/Desktop/code/go_gin/controller/user.go:71 +0x8d\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.GinRecovery.func1(0xc000510400)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:85 +0x6a\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.GinLogger.func1(0xc000510400)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:25 +0xa4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000510400)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99 +0x7a\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000510400)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241 +0xf4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc00011e340, 0xc000510400)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489 +0x2aa\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc00011e340, 0x19c0290, 0xc00019c000, 0xc000232200)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445 +0x15c\nnet/http.serverHandler.ServeHTTP(0xc0001921c0, 0x19c0290, 0xc00019c000, 0xc000232200)\n\t/usr/local/go/src/net/http/server.go:2887 +0xa3\nnet/http.(*conn).serve(0xc0000a2500, 0x19c2060, 0xc000090a00)\n\t/usr/local/go/src/net/http/server.go:1952 +0x8cd\ncreated by net/http.(*Server).Serve\n\t/usr/local/go/src/net/http/server.go:3013 +0x39b\n"}
+go_gin/middlewares.GinRecovery.func1.1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:71
+runtime.gopanic
+	/usr/local/go/src/runtime/panic.go:965
+runtime.panicmem
+	/usr/local/go/src/runtime/panic.go:212
+runtime.sigpanic
+	/usr/local/go/src/runtime/signal_unix.go:734
+go_gin/dao.GetUserList
+	/Users/peiyahui/Desktop/code/go_gin/dao/userDao.go:30
+go_gin/controller.GetUserList
+	/Users/peiyahui/Desktop/code/go_gin/controller/user.go:71
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.GinRecovery.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:85
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.GinLogger.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:25
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1952
+2021-06-04T17:21:01.138+0800	INFO	middlewares/logger.go:29	/v1/user/list	{"method": "POST", "path": "/v1/user/list", "query": "page=2&pageSize=10", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "81.886301ms"}
+2021-06-04T17:23:01.531+0800	INFO	middlewares/logger.go:29	/v1/user/list	{"method": "POST", "path": "/v1/user/list", "query": "page=2&pageSize=10", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "69.286µs"}
+2021-06-04T17:24:32.156+0800	INFO	middlewares/logger.go:29	/v1/user/list	{"method": "POST", "path": "/v1/user/list", "query": "page=2&pageSize=10", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "108.921µs"}
+2021-06-04T17:24:38.781+0800	INFO	middlewares/logger.go:29	/v1/user/list	{"method": "POST", "path": "/v1/user/list", "query": "page=2&pageSize=10", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "239.923µs"}
+2021-06-04T17:25:05.846+0800	ERROR	middlewares/logger.go:71	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /v1/user/list?page=2&pageSize=10 HTTP/1.1\r\nHost: 127.0.0.1:8022\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 268\r\nContent-Type: multipart/form-data; boundary=--------------------------040458592000008851443872\r\nPostman-Token: 3c69aa7d-8549-42d7-966f-ce2bfc0991b9\r\nUser-Agent: PostmanRuntime/7.26.8\r\nX-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MCwiTmlja05hbWUiOiIiLCJBdXRob3JpdHlJZCI6MCwiZXhwIjoxNjI1Mzg5NDkwLCJpc3MiOiJ0ZXN0IiwibmJmIjoxNjIyNzk3NDkwfQ.pulih9O51uTtHT2hOzkqbyGXGcfzmbm3VLPJcqnkHxk\r\n\r\n", "stack": "goroutine 38 [running]:\nruntime/debug.Stack(0x0, 0xc000554280, 0x22c)\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x9f\ngo_gin/middlewares.GinRecovery.func1.1(0xc000228300, 0x1)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:74 +0x24a\npanic(0x17e0dc0, 0x20b39e0)\n\t/usr/local/go/src/runtime/panic.go:965 +0x1b9\ngo_gin/dao.GetUserList(0x2, 0x8, 0xc00011e6a0, 0x0, 0x0, 0x1877c00)\n\t/Users/peiyahui/Desktop/code/go_gin/dao/userDao.go:30 +0x21b\ngo_gin/controller.GetUserList(0xc000228300)\n\t/Users/peiyahui/Desktop/code/go_gin/controller/user.go:71 +0x8d\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.JWTAuth.func1(0xc000228300)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/jwt.go:49 +0x1db\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.GinRecovery.func1(0xc000228300)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:85 +0x6a\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.GinLogger.func1(0xc000228300)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:25 +0xa4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000228300)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99 +0x7a\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000228300)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241 +0xf4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0003d4000, 0xc000228300)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489 +0x2aa\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0003d4000, 0x19bff10, 0xc0001762a0, 0xc000228500)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445 +0x15c\nnet/http.serverHandler.ServeHTTP(0xc000176000, 0x19bff10, 0xc0001762a0, 0xc000228500)\n\t/usr/local/go/src/net/http/server.go:2887 +0xa3\nnet/http.(*conn).serve(0xc0000baaa0, 0x19c1ce0, 0xc00048c280)\n\t/usr/local/go/src/net/http/server.go:1952 +0x8cd\ncreated by net/http.(*Server).Serve\n\t/usr/local/go/src/net/http/server.go:3013 +0x39b\n"}
+go_gin/middlewares.GinRecovery.func1.1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:71
+runtime.gopanic
+	/usr/local/go/src/runtime/panic.go:965
+runtime.panicmem
+	/usr/local/go/src/runtime/panic.go:212
+runtime.sigpanic
+	/usr/local/go/src/runtime/signal_unix.go:734
+go_gin/dao.GetUserList
+	/Users/peiyahui/Desktop/code/go_gin/dao/userDao.go:30
+go_gin/controller.GetUserList
+	/Users/peiyahui/Desktop/code/go_gin/controller/user.go:71
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.JWTAuth.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/jwt.go:49
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.GinRecovery.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:85
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.GinLogger.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:25
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1952
+2021-06-04T17:25:05.847+0800	INFO	middlewares/logger.go:29	/v1/user/list	{"method": "POST", "path": "/v1/user/list", "query": "page=2&pageSize=10", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "78.038326ms"}
+2021-06-04T17:26:46.077+0800	ERROR	middlewares/logger.go:71	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /v1/user/list?page=2&pageSize=10 HTTP/1.1\r\nHost: 127.0.0.1:8022\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 268\r\nContent-Type: multipart/form-data; boundary=--------------------------182190997408997075941500\r\nPostman-Token: 0a73d343-c881-4639-b232-2574f64b819b\r\nUser-Agent: PostmanRuntime/7.26.8\r\nX-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MCwiTmlja05hbWUiOiIiLCJBdXRob3JpdHlJZCI6MCwiZXhwIjoxNjI1Mzg5NDkwLCJpc3MiOiJ0ZXN0IiwibmJmIjoxNjIyNzk3NDkwfQ.pulih9O51uTtHT2hOzkqbyGXGcfzmbm3VLPJcqnkHxk\r\n\r\n", "stack": "goroutine 38 [running]:\nruntime/debug.Stack(0x0, 0xc000012280, 0x22c)\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x9f\ngo_gin/middlewares.GinRecovery.func1.1(0xc000232300, 0x1)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:74 +0x24a\npanic(0x17e0e40, 0x20b39e0)\n\t/usr/local/go/src/runtime/panic.go:965 +0x1b9\ngo_gin/dao.GetUserList(0x2, 0x8, 0xc00050e500, 0x0, 0x0, 0x1877c80)\n\t/Users/peiyahui/Desktop/code/go_gin/dao/userDao.go:31 +0x29b\ngo_gin/controller.GetUserList(0xc000232300)\n\t/Users/peiyahui/Desktop/code/go_gin/controller/user.go:71 +0x8d\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.JWTAuth.func1(0xc000232300)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/jwt.go:49 +0x1db\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.GinRecovery.func1(0xc000232300)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:85 +0x6a\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngo_gin/middlewares.GinLogger.func1(0xc000232300)\n\t/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:25 +0xa4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000232300)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99 +0x7a\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000232300)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241 +0xf4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc00055c340, 0xc000232300)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489 +0x2aa\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc00055c340, 0x19bffd0, 0xc00056a0e0, 0xc000232200)\n\t/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445 +0x15c\nnet/http.serverHandler.ServeHTTP(0xc00056a000, 0x19bffd0, 0xc00056a0e0, 0xc000232200)\n\t/usr/local/go/src/net/http/server.go:2887 +0xa3\nnet/http.(*conn).serve(0xc000478000, 0x19c1da0, 0xc00050c1c0)\n\t/usr/local/go/src/net/http/server.go:1952 +0x8cd\ncreated by net/http.(*Server).Serve\n\t/usr/local/go/src/net/http/server.go:3013 +0x39b\n"}
+go_gin/middlewares.GinRecovery.func1.1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:71
+runtime.gopanic
+	/usr/local/go/src/runtime/panic.go:965
+runtime.panicmem
+	/usr/local/go/src/runtime/panic.go:212
+runtime.sigpanic
+	/usr/local/go/src/runtime/signal_unix.go:734
+go_gin/dao.GetUserList
+	/Users/peiyahui/Desktop/code/go_gin/dao/userDao.go:31
+go_gin/controller.GetUserList
+	/Users/peiyahui/Desktop/code/go_gin/controller/user.go:71
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.JWTAuth.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/jwt.go:49
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.GinRecovery.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:85
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+go_gin/middlewares.GinLogger.func1
+	/Users/peiyahui/Desktop/code/go_gin/middlewares/logger.go:25
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/peiyahui/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1952
+2021-06-04T17:26:46.077+0800	INFO	middlewares/logger.go:29	/v1/user/list	{"method": "POST", "path": "/v1/user/list", "query": "page=2&pageSize=10", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "109.248612ms"}
+2021-06-04T17:34:53.997+0800	INFO	middlewares/logger.go:29	/v1/user/list	{"method": "POST", "path": "/v1/user/list", "query": "page=2&pageSize=10", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "45.718µs"}
+2021-06-04T17:52:32.574+0800	INFO	middlewares/logger.go:29	/v1/user/login	{"method": "POST", "path": "/v1/user/login", "query": "password=12345678&mobile=13999189290&captcha=44351&captcha_id=U77txKHURD1ns77nsJaN&name=peiyahui007", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "246.292µs"}
+2021-06-04T17:53:44.564+0800	INFO	middlewares/logger.go:29	/v1/user/login	{"method": "POST", "path": "/v1/user/login", "query": "password=12345678&captcha=44351&captcha_id=U77txKHURD1ns77nsJaN&name=13999189290", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "242.199234ms"}
+2021-06-04T17:54:03.760+0800	INFO	middlewares/logger.go:29	/v1/user/login	{"method": "POST", "path": "/v1/user/login", "query": "password=12345678&captcha=44351&captcha_id=U77txKHURD1ns77nsJaN&name=13999189290", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "59.772934ms"}
+2021-06-04T17:54:27.425+0800	INFO	middlewares/logger.go:29	/v1/user/login	{"method": "POST", "path": "/v1/user/login", "query": "password=12345678&captcha=44351&captcha_id=U77txKHURD1ns77nsJaN&name=13999189290", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": "65.989663ms"}

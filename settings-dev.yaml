@@ -1,0 +1,23 @@
+name: "go-gin"
+port: 8022
+logsAddress: "./logs/"
+
+mysql:
+  name: "root"
+  host: "120.77.213.159"
+  port: 3306
+  password: "12345678"
+  dbName: "mxshop_usr_srv"
+
+redis:
+  host: "120.77.213.159"
+  port: 6379
+
+jwt:
+  key: "EYsnfKMf5XWk87LASEs28Dj5ZqGkSerH"
+
+minio:
+  endpoint: "127.0.0.1:9000"
+  accessKeyID: "minioadmin"
+  secretAccessKey: "minioadmin"
+
