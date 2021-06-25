@@ -4,13 +4,13 @@ logsAddress: "./logs/"
 
 mysql:
   name: "root"
-  host: "120.77.213.159"
+  host: "120.77.XXX.XXX"
   port: 3306
-  password: "12345678"
+  password: "XXXXXXXXX"
   dbName: "mxshop_usr_srv"
 
 redis:
-  host: "120.77.213.159"
+  host: "120.77.XXXX.XXXX"
   port: 6379
 
 jwt:
